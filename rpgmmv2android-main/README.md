@@ -28,10 +28,12 @@
 - **`rpgmmv2android-main/`** —— Android 壳工程（基于原项目）。内含 WebView 加载游戏的 `assets` 目录，以及自动适配 MV/MZ 的存档逻辑。
 - **`打包工具/`** —— 桌面打包工具。读取 `www/` 下的游戏资源，自动拷贝进壳工程的 `assets`、按引擎自动打补丁、生成签名、调用 Gradle 构建 APK。
 - **`www/`** —— 游戏资源存放目录。将你的游戏发布包（`index.html`、`data/`、`js/`、`img/`、`audio/` 等）放入此目录即可。
+- <img width="569" height="112" alt="image" src="https://github.com/user-attachments/assets/9870a8c6-7520-4b1d-b510-e4063772b801" />
+
 
 ### 使用方法（推荐：打包工具一键打包）
 
-1. 将游戏资源（RPG Maker **MV 或 MZ** 游戏目录下的 `www` 文件夹内文件，不含 `www` 文件夹本身）放入本项目的 `www/` 目录。
+1. 将游戏资源（RPG Maker **MV 或 MZ** 游戏目录下的 `www` 文件夹内文件，不含 `www` 文件夹本身）放入本项目的 `www/` 目录（请在下载后自行创建www文件夹）。
 2. 打开 `打包工具/start_builder.bat`（需已安装带 tkinter 的 Python 3 及 Java JDK）。
 3. 在打包界面中：选择游戏来源（默认指向 `www/`）、填写 `applicationId` 与应用名、可选择自定义图标（未选则用 `www/icon/icon.png`，若无则使用默认图标）。
 4. 点击打包。工具会自动：清空并重建壳工程的 `assets` → 写入游戏资源 → 按 MV/MZ 自动打存档适配补丁 → 自动生成签名密钥 → 调用 `gradlew` 构建。
